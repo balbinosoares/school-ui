@@ -1,0 +1,11 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "school-ui",
+    "namespace": "com.saphanadev",
+    "platform": "Application Router @ Cloud Foundry",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": true
+  }
+}

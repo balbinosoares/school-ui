@@ -1,0 +1,26 @@
+ID: school-ui
+_schema-version: 3.2.0
+description: Enter description here
+version: 0.0.1
+
+modules:
+ - name: school-ui
+   type: nodejs
+   path: approuter
+   build-parameters:
+     builder: custom
+     commands:
+       - npm install
+       - npm run build:ui --prefix ..
+   parameters:
+      disk-quota: 512M
+      memory: 512M
+   requires:
+      - name: school-ui_destination
+
+resources:
+ - name: school-ui_destination
+   type: org.cloudfoundry.managed-service
+   parameters:
+      service-plan: lite
+      service: destination
