@@ -1,0 +1,10 @@
+<mvc:View controllerName="com.saphanadev.school-ui.controller.Class" displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout">
+
+  <Page title="{i18n>classesMaintain}" showNavButton="true" navButtonPress=".onNavBack">
+
+
+
+  </Page>
+
+
+</mvc:View> 

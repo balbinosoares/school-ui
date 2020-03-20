@@ -1,7 +1,10 @@
 sap.ui.define([
-  "sap/ui/core/mvc/Controller"
-], function(Controller) {
+  "com/saphanadev/school-ui/controller/BaseController"
+], function(BaseController) {
   "use strict";
 
-  return Controller.extend("com.saphanadev.school-ui.controller.MainView", {});
+  return BaseController.extend("com.saphanadev.school-ui.controller.MainView", {
+
+
+  });
 });

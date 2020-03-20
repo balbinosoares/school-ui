@@ -1,0 +1,42 @@
+<mvc:View controllerName="com.saphanadev.school-ui.controller.Home" 
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:layout="sap.ui.layout">
+    <Page title="{i18n>title}">
+        <content>
+            <layout:VerticalLayout class="sapUiResponsiveMargin">
+                <Title titleStyle="H2" text="{i18n>adminView}" class="sapUiTinyMarginBegin" />
+                <layout:HorizontalLayout allowWrapping="true">
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>classRoom}" subheader="{i18n>classRoomMaintain}" press=".onNavToClassRoom" >
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent value="10" icon="sap-icon://course-book"/>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>classes}" press=".onNavToClass">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent indicator="None" valueColor="Neutral" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>course}" subheader="{i18n>{i18n>courseMaintain}}" press=".onNavToCourse">
+                        <tileContent>
+                            <TileContent>
+                                <content>
+                                    <NumericContent indicator="None" valueColor="Neutral" />
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </layout:HorizontalLayout>
+            </layout:VerticalLayout>
+        </content>
+    </Page>
+
+</mvc:View>

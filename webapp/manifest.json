@@ -10,7 +10,6 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}"
   },
-
   "sap.ui": {
     "technology": "UI5",
     "icons": {
@@ -27,7 +26,6 @@
       "phone": true
     }
   },
-
   "sap.ui5": {
     "rootView": {
       "viewName": "com.saphanadev.school-ui.view.MainView",
@@ -56,9 +54,11 @@
       }
     },
     "resources": {
-      "css": [{
-        "uri": "css/style.css"
-      }]
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     },
     "routing": {
       "config": {
@@ -67,18 +67,59 @@
         "viewPath": "com.saphanadev.school-ui.view",
         "controlId": "app",
         "controlAggregation": "pages",
+        "transition": "slite",
+        "bypassed": {
+          "target": "notFound"
+        },
         "async": true
       },
-      "routes": [{
-        "name": "RouteMainView",
-        "pattern": "RouteMainView",
-        "target": ["TargetMainView"]
-      }],
+      "routes": [
+        {
+          "pattern": "",
+          "name": "appHome",
+          "target": "home"
+        },
+        {
+          "pattern": "course",
+          "name": "course",
+          "target": "course"
+        },
+        {
+          "pattern": "classroom",
+          "name": "classroom",
+          "target": "classroom"
+        },
+        {
+          "pattern": "class",
+          "name": "class",
+          "target": "class"
+        }
+      ],
       "targets": {
-        "TargetMainView": {
-          "viewType": "XML",
-          "viewLevel": 1,
-          "viewName": "MainView"
+        "home": {
+          "viewId": "home",
+          "viewName": "Home",
+          "viewLevel": 1
+        },
+        "notFound": {
+           "viewId": "notFound",
+           "viewName": "NotFound",
+           "transition": "show"
+        },  
+        "course": {
+          "viewId": "course",
+          "viewName": "Course",
+          "viewLevel": 2
+        },
+        "classroom": {
+          "viewId": "classroom",
+          "viewName": "Classroom",
+          "viewLevel": 2
+        },
+        "class": {
+          "viewId": "class",
+          "viewName": "Class",
+          "viewLevel": 2
         }
       }
     }
