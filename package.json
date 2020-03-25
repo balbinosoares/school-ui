@@ -5,7 +5,7 @@
     "node": "12.X"
   },
   "scripts": {
-    "start": "ui5 serve -o index.html",
+    "start": "ui5 serve -o index.html --accept-remote-connections",
     "serve": "ui5 serve",
     "test": "run-s lint karma",
     "karma-ci": "karma start karma-ci.conf.js",
