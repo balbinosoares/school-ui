@@ -1,10 +1,18 @@
 {
-  "welcomeFile": "/index.html",
   "authenticationMethod": "none",
-  "routes": [{
-    "source": "^/(.*)$",
-    "target": "$1",
-    "authenticationType": "none",
-    "localDir": "webapp"
-  }]
+  "routes": [
+    {
+      "source": "^/api(.*)$",
+      "target": "$1",
+      "destination": "srv_api",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "localDir": "../webapp"
+    }
+
+  ]
 }

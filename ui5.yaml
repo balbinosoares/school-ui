@@ -9,3 +9,12 @@ server:
     configuration:
      port: 35729
      path: webapp
+  - name: ui5-middleware-cfdestination
+    afterMiddleware: compression
+    configuration:
+       debug: true
+       port: 1091
+       xsappJson: approuter/xs-app.json
+       destinations: 
+        - name: srv_api
+          url: http://localhost:4004   
